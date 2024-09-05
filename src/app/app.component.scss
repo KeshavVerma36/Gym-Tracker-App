@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  app-stopwatch {
+    /* Style for stopwatch component */
+  }
+  
+  router-outlet {
+    flex: 1;  /* Allow router-outlet to take up the remaining space */
+  }
+  

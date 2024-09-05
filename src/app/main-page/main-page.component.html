@@ -1,0 +1,42 @@
+
+<div class="exercise-container">
+  <p class="title">Add An Exercise</p>
+  <div class="input-group">
+    <input class="exercise-input" type="text" [(ngModel)]="newExercise.name" placeholder="Enter new exercise name">
+    <button class="add-button" (click)="addExercise()">ADD</button>
+  </div>
+</div>
+
+<div class="exercise-container">
+  <div class="exercise-list">
+    <h2 class="routine-title">Exercises for {{routine}}</h2>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let exercise of exercises; let i = index" [expanded]="exercise.expanded">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <ng-container *ngIf="editIndex !== i">
+              {{exercise.name}}
+            </ng-container>
+            <ng-container *ngIf="editIndex === i">
+              <input [(ngModel)]="editExercise.name" (ngModelChange)="updateEditExerciseName($event)" placeholder="Edit exercise name" class="edit-input">
+            </ng-container>
+          </mat-panel-title>
+          <mat-panel-description>
+            <button *ngIf="editIndex !== i" class="edit-button" (click)="startEditing(i)">Edit</button>
+            <button class="delete-button" (click)="deleteExercise(i)">Delete</button>
+            <button *ngIf="editIndex === i" class="save-button" (click)="saveEdit(i)">Save</button>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="exercise-content">
+          <div class="grid">
+            <div class="flex gap-20" *ngFor="let set of exercise.sets; let j = index">
+              <input class="input-num" type="number" [(ngModel)]="set.weight" (blur)="saveSetsAndReps(i, j, 'weight', $event)" placeholder="KG" [ngClass]="{'edit-mode': editIndex === i}">
+              <p class="x-sign">X</p>
+              <input class="input-num" type="number" [(ngModel)]="set.reps" (blur)="saveSetsAndReps(i, j, 'reps', $event)" placeholder="Reps" [ngClass]="{'edit-mode': editIndex === i}">
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

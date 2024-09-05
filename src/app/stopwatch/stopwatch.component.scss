@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+.font-pop {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #6288df14;
+    font-family: 'Roboto', sans-serif;
+}
+
+:host {
+    display: flex; 
+    width: 100vw;
+    height: 100vh;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.sw-container {
+    background-color: #6288df;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 3px 6px rgba(129, 129, 129, 0.15);
+    margin-top: 15px;
+
+    p {
+        margin: 0px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    .add-btn {
+        background-color: white;
+        color: #405da5;
+        padding: 5px 10px; 
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-bottom: 1px;
+    }
+
+    .input-exer {
+        width: calc(100% - 20px); 
+        height: 30px;
+        padding: 5px;
+        font-size: 16px; 
+        box-sizing: border-box;
+        border-radius: 4px;
+        background-color: #405da5;
+        color: white;
+        margin: 0 auto; 
+        display: block;
+    }
+
+    .edit-btn {
+        color: white;
+    }
+}
+
+.stopwatch {
+    font-size: 35px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.button-container button {
+    background: #FFF;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: #6288df;
+    font-size: 16px;
+}
+
+.button-container .fa-play,
+.button-container .fa-pause {
+    padding-left: 2px;
+}
+
+.button-container .ripple {
+    background-position: center;
+    transition: background 0.9s;
+}
+
+.button-container .ripple:hover {
+    background: #f1f2f5 radial-gradient(circle, transparent 1%, #f1f2f5 1%) center/15000%;
+}
+
+.button-container .ripple:active {
+    background-color: #b3b5b9;
+    background-size: 100%;
+    transition: 0s;
+}
+
+.input-num {
+    width: 50px; 
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #405da5;
+    color: white;
+    margin: 5px 5px;
+    text-align: center;
+    margin-left: 20px; 
+}
+
+.input-num::-webkit-outer-spin-button,
+.input-num::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: grid;  
+    gap: 5px; 
+    margin-top: 10px;
+}
+
+.set-container {
+    display: flex;  
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 10px; 
+}
+
+.mat-expansion-panel {
+    margin: 10px 0
+}
+
+.mat-expansion-panel-header {
+    background-color: #6288df;
+    color: white;
+}
+
+.mat-expansion-panel-content {
+    background-color: #fff;
+    color: #6288df;
+}
+
+.mat-expansion-panel.mat-expanded {
+    background-color: #6288df;
+}
+
+.mat-expansion-panel.mat-expanded:hover .mat-expansion-panel-header {
+    background-color: #405da5;
+}
+
+.mat-expansion-panel.mat-expanded:not(.mat-expanded) .mat-expansion-panel-header:hover {
+    background-color: #333; 
+}
+
+.edit-btn {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    color: #405da5;
+}
+
+.dlt-btn {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    color: #405da5;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.exer-name {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
+
+.x-sign {
+    font-size: 20px;
+    color: white;
+    padding-top: 8px;
+}

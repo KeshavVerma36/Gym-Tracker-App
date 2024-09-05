@@ -1,0 +1,24 @@
+<div class="workout-container">
+  <div class="add-routine">
+    <p class="add-title">Add a New Workout Routine</p>
+    <input class="routine-input" type="text" [(ngModel)]="newRoutine" placeholder="Enter new routine name">
+    <button class="add-routine-button" (click)="addRoutine()">ADD</button>
+  </div>
+</div>
+
+<div class="workout-container">
+  <h2 class="routine-title">Select a Workout Routine</h2>
+  <ul class="routine-list">
+    <li *ngFor="let routine of routines; let i = index" class="routine-item">
+      <ng-container *ngIf="editIndex !== i">
+        <span (click)="navigateToExercises(routine)">{{ routine }}</span>
+        <button class="edit-button" (click)="startEditing(i, routine)">Edit</button>
+        <button class="delete-button" (click)="deleteRoutine(i)">Delete</button>
+      </ng-container>
+      <ng-container *ngIf="editIndex === i">
+        <input [(ngModel)]="editRoutineName" class="edit-input" placeholder="Edit routine name">
+        <button class="save-button" (click)="saveEdit(i)">Save</button>
+      </ng-container>
+    </li>
+  </ul>
+</div>

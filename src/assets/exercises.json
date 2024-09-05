@@ -1,0 +1,33 @@
+{
+  "Chest Tricep": [
+    {
+      "name": "Chest Press",
+      "sets": [
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 }
+      ]
+    },
+    {
+      "name": "Tricep Dips",
+      "sets": [
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 }
+      ]
+    }
+  ],
+  "Back Bicep": [
+    {
+      "name": "Pull Up",
+      "sets": [
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 },
+        { "weight": 0, "reps": 0 }
+      ]
+    }
+  ]
+}
